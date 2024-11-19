@@ -62,7 +62,7 @@ function App() {
         alert('An unknown error occurred.');
       }
     } finally {
-      setProcessing(false) // toast messages
+      setProcessing(false)
     }
   };
 
