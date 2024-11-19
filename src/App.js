@@ -47,7 +47,7 @@ function App() {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
-        credentials: 'include', 
+        withCredentials: true
       });
   
       setTranscription(response.data.transcription)
