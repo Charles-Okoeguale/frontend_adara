@@ -46,7 +46,8 @@ function App() {
       const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/transcribe`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
-        }
+        },
+        credentials: 'include', 
       });
   
       setTranscription(response.data.transcription)
