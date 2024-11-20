@@ -43,7 +43,7 @@ function App() {
       const formData = new FormData();
       formData.append('audio', audioBlob, 'recording.webm');
       setProcessing(true)
-      const response = await axios.post("http://localhost:8001/transcribe-audio", formData, {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/transcribe-audio`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
